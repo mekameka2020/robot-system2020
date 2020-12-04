@@ -20,19 +20,28 @@
 
 #準備 (プログラム)
 1.git clone https://github.com/mekameka2020/robot-system2020.git と打ち込む。
+➝このリポジトリのクローンを作成する
 
 2.cd led と打ち込む
+➝myled.cやMakefileを操作するために必要な工程です。
 
-3.makeと打ち込む　
+3.makeと打ち込む
+➝カーネルモジュールの作成
 (しばし待機)
+※万一、
+「Makefile:4: *** missing separator (did you mean TAB instead of 8 spaces?).  Stop.」
+という表示があった場合は、Makefile内のスペースをTabに変更すること。
 
 4.sudo insmod myled.koと打ち込む
+➝カーネルモジュールのインストールを行う。
 
 ※もし、古いモジュールとカーネルモジュールがある場合は一度，以下のコマンドを打ち込み新しいモジュールの作成を行う。
-・sudo rmmod myled
-・make clean
+・sudo rmmod myled　➝カーネルモジュールのアンインストール
+・make clean　➝カーネルモジュールの消去
 
 5.sudo chmod 666 /dev/myled0
+→"myled0"権限を変更する
+
 ⇒以下の#使い方が動かせるようになる。
 
 
