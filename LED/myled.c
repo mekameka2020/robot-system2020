@@ -1,4 +1,11 @@
-nclude <linux/module.h>
+  
+// SPDX-License-Identifier: GPL-2.0
+/*
+ * Copyright (C) 2020 STRATO.  All rights reserved.
+ */
+
+
+#include <linux/module.h>
 #include <linux/fs.h>
 #include <linux/cdev.h>
 #include <linux/device.h>    //追加
